@@ -1,0 +1,234 @@
+##fileformat=VCFv4.2
+##FILTER=<ID=PASS,Description="All filters passed">
+##DRAGENCommandLine=<ID=HashTableBuild,Version="SW: 01.003.044.3.3.5, HashTableVersion: 7",CommandLineOptions="/opt/edico/bin/dragen --lic-instance-id-location /root/.edico --build-hash-table true --ht-reference /data/input/appresults/126241120/hs37d5.fa --ht-build-rna-hashtable true --enable-cnv true --ht-alt-aware-validate true --output-directory /data/scratch/hs37d5">
+##DRAGENCommandLine=<ID=dragen,Version="SW: 05.021.332.3.4.5, HW: 05.021.332",Date="Thu Oct 17 16:00:19 UTC 2019",CommandLineOptions="--lic-server https://XXXXXXXXXXXX:YYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY@license.edicogenome.com --lic-instance-id-location /root/.edico --output_status_file /data/scratch/progress.log --enable-map-align true --enable-map-align-output true --output-format BAM --enable-duplicate-marking true --enable-cnv true --cnv-enable-self-normalization true --cnv-segmentation-mode cbs --enable-bam-indexing true --enable-variant-caller true --enable-vcf-compression true --vc-enable-bqd true --qc-cross-cont-vcf /opt/edico/config/sample_cross_contamination_resource_GRCh37.vcf --output-directory /data/output/appresults/7860854/60820188475559 --intermediate-results-dir /data/scratch/intermediate --output-file-prefix 60820188475559 --fastq-list /data/scratch/fastq_sheet.csv --ref-dir /data/scratch/hs37d5-cnv-anchor.v7 --skip-vc-on-contigs NC_007605,hs37d5 --enable-sv true --sv-call-regions-bed /data/scratch/SV_hs37d5.bed.gz --sv-reference /data/scratch/fasta/hs37d5.fa">
+##FILTER=<ID=VQSRTrancheSNP99.90to100.00+,Description="Truth sensitivity tranche level for SNP model at VQS Lod < -39530.4571">
+##FILTER=<ID=VQSRTrancheSNP99.90to100.00,Description="Truth sensitivity tranche level for SNP model at VQS Lod: -39530.4571 <= x < -1.8816">
+##FORMAT=<ID=AD,Number=R,Type=Integer,Description="Allelic depths for the ref and alt alleles in the order listed">
+##FORMAT=<ID=AF,Number=A,Type=Float,Description="Allele fractions for alt alleles in the order listed">
+##FORMAT=<ID=DP,Number=1,Type=Integer,Description="Approximate read depth (reads with MQ=255 or with bad mates are filtered)">
+##FORMAT=<ID=F1R2,Number=R,Type=Integer,Description="Count of reads in F1R2 pair orientation supporting each allele">
+##FORMAT=<ID=F2R1,Number=R,Type=Integer,Description="Count of reads in F2R1 pair orientation supporting each allele">
+##FORMAT=<ID=FT,Number=.,Type=String,Description="Genotype-level filter">
+##FORMAT=<ID=GP,Number=G,Type=Float,Description="Phred-scaled posterior probabilities for genotypes as defined in the VCF specification">
+##FORMAT=<ID=GQ,Number=1,Type=Integer,Description="Genotype Quality">
+##FORMAT=<ID=GT,Number=1,Type=String,Description="Genotype">
+##FORMAT=<ID=ICNT,Number=2,Type=Integer,Description="Counts of INDEL informative reads based on the reference confidence model">
+##FORMAT=<ID=LOD,Number=1,Type=Float,Description="Per-sample variant LOD score">
+##FORMAT=<ID=MB,Number=4,Type=Integer,Description="Per-sample component statistics to detect mate bias">
+##FORMAT=<ID=MIN_DP,Number=1,Type=Integer,Description="Minimum DP observed within the GVCF block">
+##FORMAT=<ID=PL,Number=G,Type=Integer,Description="Normalized, Phred-scaled likelihoods for genotypes as defined in the VCF specification">
+##FORMAT=<ID=PRI,Number=G,Type=Float,Description="Phred-scaled prior probabilities for genotypes">
+##FORMAT=<ID=PS,Number=1,Type=Integer,Description="Physical phasing ID information, where each unique ID within a given sample (but not across samples) connects records within a phasing group">
+##FORMAT=<ID=SB,Number=4,Type=Integer,Description="Per-sample component statistics which comprise the Fisher's Exact Test to detect strand bias">
+##FORMAT=<ID=SPL,Number=.,Type=Integer,Description="Normalized, Phred-scaled likelihoods for SNPs based on the reference confidence model">
+##GATKCommandLine=<ID=ApplyVQSR,CommandLine="ApplyVQSR  --recal-file /home/ubuntu/processing/data/60820188475559/snpoutput.recal --tranches-file /home/ubuntu/processing/data/60820188475559/snpoutput.tranches --output /home/ubuntu/processing/data/60820188475559/60820188475559.filtered.snp.vcf.gz --truth-sensitivity-filter-level 99.5 --mode SNP --variant /home/ubuntu/processing/data/60820188475559/60820188475559.ysnp.vcf.gz --reference /home/ubuntu/data/references/human_g1k_v37.fasta  --use-allele-specific-annotations false --ignore-all-filters false --exclude-filtered false --interval-set-rule UNION --interval-padding 0 --interval-exclusion-padding 0 --interval-merging-rule ALL --read-validation-stringency SILENT --seconds-between-progress-updates 10.0 --disable-sequence-dictionary-validation false --create-output-bam-index true --create-output-bam-md5 false --create-output-variant-index true --create-output-variant-md5 false --lenient false --add-output-sam-program-record true --add-output-vcf-command-line true --cloud-prefetch-buffer 40 --cloud-index-prefetch-buffer -1 --disable-bam-index-caching false --sites-only-vcf-output false --help false --version false --showHidden false --verbosity INFO --QUIET false --use-jdk-deflater false --use-jdk-inflater false --gcs-max-retries 20 --gcs-project-for-requester-pays  --disable-tool-default-read-filters false",Version="4.1.3.0-31-gf499656-SNAPSHOT",Date="October 19, 2019 8:59:34 AM UTC">
+##INFO=<ID=AC,Number=A,Type=Integer,Description="Allele count in genotypes, for each ALT allele, in the same order as listed">
+##INFO=<ID=AF,Number=A,Type=Float,Description="Allele Frequency, for each ALT allele, in the same order as listed">
+##INFO=<ID=AN,Number=1,Type=Integer,Description="Total number of alleles in called genotypes">
+##INFO=<ID=DB,Number=0,Type=Flag,Description="dbSNP Membership">
+##INFO=<ID=DP,Number=1,Type=Integer,Description="Approximate read depth; some reads may have been filtered">
+##INFO=<ID=END,Number=1,Type=Integer,Description="Stop position of the interval">
+##INFO=<ID=FS,Number=1,Type=Float,Description="Phred-scaled p-value using Fisher's exact test to detect strand bias">
+##INFO=<ID=FractionInformativeReads,Number=1,Type=Float,Description="The fraction of informative reads out of the total reads">
+##INFO=<ID=LOD,Number=1,Type=Float,Description="Variant LOD score">
+##INFO=<ID=MQ,Number=1,Type=Float,Description="RMS Mapping Quality">
+##INFO=<ID=MQRankSum,Number=1,Type=Float,Description="Z-score From Wilcoxon rank sum test of Alt vs. Ref read mapping qualities">
+##INFO=<ID=NEGATIVE_TRAIN_SITE,Number=0,Type=Flag,Description="This variant was used to build the negative training set of bad variants">
+##INFO=<ID=POSITIVE_TRAIN_SITE,Number=0,Type=Flag,Description="This variant was used to build the positive training set of good variants">
+##INFO=<ID=QD,Number=1,Type=Float,Description="Variant Confidence/Quality by Depth">
+##INFO=<ID=R2_5P_bias,Number=1,Type=Float,Description="Score based on mate bias and distance from 5 prime end">
+##INFO=<ID=ReadPosRankSum,Number=1,Type=Float,Description="Z-score from Wilcoxon rank sum test of Alt vs. Ref read position bias">
+##INFO=<ID=SOR,Number=1,Type=Float,Description="Symmetric Odds Ratio of 2x2 contingency table to detect strand bias">
+##INFO=<ID=VQSLOD,Number=1,Type=Float,Description="Log odds of being a true variant versus being false under the trained gaussian mixture model">
+##INFO=<ID=culprit,Number=1,Type=String,Description="The annotation which was the worst performing in the Gaussian mixture model, likely the reason why the variant was filtered out">
+##bcftools_annotateCommand=annotate -x FILTER /home/ubuntu/processing/data/60820188475559/60820188475559.xsnp.vcf.gz; Date=Sat Oct 19 08:03:03 2019
+##bcftools_annotateVersion=1.7+htslib-1.7-2
+##bcftools_filterCommand=filter -i 'TYPE="snp" ' /home/ubuntu/processing/data/60820188475559/60820188475559.raw.vcf.gz; Date=Sat Oct 19 07:59:58 2019
+##bcftools_filterVersion=1.7+htslib-1.7-2
+##contig=<ID=1,length=249250621>
+##contig=<ID=2,length=243199373>
+##contig=<ID=3,length=198022430>
+##contig=<ID=4,length=191154276>
+##contig=<ID=5,length=180915260>
+##contig=<ID=6,length=171115067>
+##contig=<ID=7,length=159138663>
+##contig=<ID=8,length=146364022>
+##contig=<ID=9,length=141213431>
+##contig=<ID=10,length=135534747>
+##contig=<ID=11,length=135006516>
+##contig=<ID=12,length=133851895>
+##contig=<ID=13,length=115169878>
+##contig=<ID=14,length=107349540>
+##contig=<ID=15,length=102531392>
+##contig=<ID=16,length=90354753>
+##contig=<ID=17,length=81195210>
+##contig=<ID=18,length=78077248>
+##contig=<ID=19,length=59128983>
+##contig=<ID=20,length=63025520>
+##contig=<ID=21,length=48129895>
+##contig=<ID=22,length=51304566>
+##contig=<ID=X,length=155270560>
+##contig=<ID=Y,length=59373566>
+##contig=<ID=MT,length=16569>
+##contig=<ID=GL000207.1,length=4262>
+##contig=<ID=GL000226.1,length=15008>
+##contig=<ID=GL000229.1,length=19913>
+##contig=<ID=GL000231.1,length=27386>
+##contig=<ID=GL000210.1,length=27682>
+##contig=<ID=GL000239.1,length=33824>
+##contig=<ID=GL000235.1,length=34474>
+##contig=<ID=GL000201.1,length=36148>
+##contig=<ID=GL000247.1,length=36422>
+##contig=<ID=GL000245.1,length=36651>
+##contig=<ID=GL000197.1,length=37175>
+##contig=<ID=GL000203.1,length=37498>
+##contig=<ID=GL000246.1,length=38154>
+##contig=<ID=GL000249.1,length=38502>
+##contig=<ID=GL000196.1,length=38914>
+##contig=<ID=GL000248.1,length=39786>
+##contig=<ID=GL000244.1,length=39929>
+##contig=<ID=GL000238.1,length=39939>
+##contig=<ID=GL000202.1,length=40103>
+##contig=<ID=GL000234.1,length=40531>
+##contig=<ID=GL000232.1,length=40652>
+##contig=<ID=GL000206.1,length=41001>
+##contig=<ID=GL000240.1,length=41933>
+##contig=<ID=GL000236.1,length=41934>
+##contig=<ID=GL000241.1,length=42152>
+##contig=<ID=GL000243.1,length=43341>
+##contig=<ID=GL000242.1,length=43523>
+##contig=<ID=GL000230.1,length=43691>
+##contig=<ID=GL000237.1,length=45867>
+##contig=<ID=GL000233.1,length=45941>
+##contig=<ID=GL000204.1,length=81310>
+##contig=<ID=GL000198.1,length=90085>
+##contig=<ID=GL000208.1,length=92689>
+##contig=<ID=GL000191.1,length=106433>
+##contig=<ID=GL000227.1,length=128374>
+##contig=<ID=GL000228.1,length=129120>
+##contig=<ID=GL000214.1,length=137718>
+##contig=<ID=GL000221.1,length=155397>
+##contig=<ID=GL000209.1,length=159169>
+##contig=<ID=GL000218.1,length=161147>
+##contig=<ID=GL000220.1,length=161802>
+##contig=<ID=GL000213.1,length=164239>
+##contig=<ID=GL000211.1,length=166566>
+##contig=<ID=GL000199.1,length=169874>
+##contig=<ID=GL000217.1,length=172149>
+##contig=<ID=GL000216.1,length=172294>
+##contig=<ID=GL000215.1,length=172545>
+##contig=<ID=GL000205.1,length=174588>
+##contig=<ID=GL000219.1,length=179198>
+##contig=<ID=GL000224.1,length=179693>
+##contig=<ID=GL000223.1,length=180455>
+##contig=<ID=GL000195.1,length=182896>
+##contig=<ID=GL000212.1,length=186858>
+##contig=<ID=GL000222.1,length=186861>
+##contig=<ID=GL000200.1,length=187035>
+##contig=<ID=GL000193.1,length=189789>
+##contig=<ID=GL000194.1,length=191469>
+##contig=<ID=GL000225.1,length=211173>
+##contig=<ID=GL000192.1,length=547496>
+##contig=<ID=NC_007605,length=171823>
+##contig=<ID=hs37d5,length=35477943>
+##reference=file:///data/scratch/hs37d5-cnv-anchor.v7/reference.bin
+##source=ApplyVQSR
+##bcftools_viewVersion=1.19+htslib-1.19
+##bcftools_viewCommand=view /Users/asiabelfiore/Downloads/60820188475559.filtered.snp.vcf.gz; Date=Wed Apr 24 00:11:24 2024
+1	15243757	.	T	C	50	PASS	AC=1;AF=0.5;AN=2;DP=32;FS=3.254;FractionInformativeReads=1;MQ=250;MQRankSum=4.719;POSITIVE_TRAIN_SITE;QD=1.56;R2_5P_bias=4.641;ReadPosRankSum=3.76;SOR=1.226;VQSLOD=9.92;culprit=MQRankSum	GT:AD:AF:DP:F1R2:F2R1:GQ:PL:GP:PRI:SB:MB	0/1:13,19:0.594:32:10,7:3,12:47:85,0,48:50,8.18e-05,50.53:0,34.77,37.77:6,7,12,7:7,6,8,11
+1	20097941	.	G	T	45.51	PASS	AC=1;AF=0.5;AN=2;DP=30;FS=0;FractionInformativeReads=1;MQ=246;MQRankSum=4.476;POSITIVE_TRAIN_SITE;QD=1.52;R2_5P_bias=12.798;ReadPosRankSum=3.357;SOR=0.818;VQSLOD=5.06;culprit=FS	GT:AD:AF:DP:F1R2:F2R1:GQ:PL:GP:PRI:SB:MB	0/1:19,11:0.367:30:10,9:9,2:45:80,0,50:45.51,0.0001439,53:0,34.77,37.77:6,13,3,8:11,8,5,6
+1	34983309	.	C	T	48.24	PASS	AC=1;AF=0.5;AN=2;DP=31;FS=5.812;FractionInformativeReads=1;MQ=250;MQRankSum=4.664;POSITIVE_TRAIN_SITE;QD=1.56;R2_5P_bias=4.782;ReadPosRankSum=2.022;SOR=0.399;VQSLOD=9.81;culprit=MQRankSum	GT:AD:AF:DP:F1R2:F2R1:GQ:PL:GP:PRI:SB:MB	0/1:18,13:0.419:31:8,5:10,8:47:83,0,50:48.24,8.698e-05,53:0,34.77,37.77:5,13,7,6:11,7,5,8
+1	67670768	.	T	C	48.13	PASS	AC=1;AF=0.5;AN=2;DP=30;FS=1.447;FractionInformativeReads=0.967;MQ=250;MQRankSum=4.494;POSITIVE_TRAIN_SITE;QD=1.6;R2_5P_bias=4.271;ReadPosRankSum=1.661;SOR=0.998;VQSLOD=9.75;culprit=FS	GT:AD:AF:DP:F1R2:F2R1:GQ:PL:GP:PRI:SB:MB	0/1:17,12:0.414:29:4,8:13,4:47:83,0,50:48.13,8.853e-05,53:0,34.77,37.77:10,7,8,4:5,12,6,6
+1	67675516	.	C	T	50	PASS	AC=1;AF=0.5;AN=2;DP=19;FS=1.82;FractionInformativeReads=1;MQ=250;MQRankSum=3.592;POSITIVE_TRAIN_SITE;QD=2.63;R2_5P_bias=24.211;ReadPosRankSum=2.518;SOR=1.27;VQSLOD=10.17;culprit=FS	GT:AD:AF:DP:F1R2:F2R1:GQ:PL:GP:PRI:SB:MB	0/1:8,11:0.579:19:7,5:1,6:48:85,0,49:50,7.119e-05,51.93:0,34.77,37.77:4,4,7,4:3,5,5,6
+1	67694202	.	A	G	50	PASS	AC=1;AF=0.5;AN=2;DP=16;FS=9.756;FractionInformativeReads=1;MQ=250;MQRankSum=3.281;POSITIVE_TRAIN_SITE;QD=3.13;R2_5P_bias=-17.224;ReadPosRankSum=3.281;SOR=3.039;VQSLOD=6.45;culprit=SOR	GT:AD:AF:DP:F1R2:F2R1:GQ:PL:GP:PRI:SB:MB	0/1:7,9:0.562:16:3,4:4,5:48:85,0,49:50,6.808e-05,52.46:0,34.77,37.77:3,4,8,1:3,4,3,6
+1	89479063	.	G	A	113.16	PASS	AC=2;AF=1;AN=2;DP=22;FS=0;FractionInformativeReads=1;MQ=230.26;POSITIVE_TRAIN_SITE;QD=5.14;SOR=0.874;VQSLOD=6.08;culprit=FS	GT:AD:AF:DP:F1R2:F2R1:GQ:PL:GP:PRI:SB:MB	1/1:0,22:1:22:0,11:0,11:63:151,66,0:113.2,63.16,2.071e-06:0,34.77,37.77:0,0,10,12:0,0,11,11
+1	155106227	.	A	T	50	PASS	AC=1;AF=0.5;AN=2;DP=38;FS=0;FractionInformativeReads=1;MQ=250;MQRankSum=5.137;POSITIVE_TRAIN_SITE;QD=1.32;R2_5P_bias=1.161;ReadPosRankSum=-0.448;SOR=0.663;VQSLOD=8.49;culprit=MQRankSum	GT:AD:AF:DP:F1R2:F2R1:GQ:PL:GP:PRI:SB:MB	0/1:15,23:0.605:38:8,12:7,11:47:85,0,46:50,9.397e-05,49.35:0,34.77,37.77:10,5,15,8:5,10,10,13
+1	193921548	.	C	T	50	PASS	AC=1;AF=0.5;AN=2;DP=28;FS=0;FractionInformativeReads=1;MQ=250;MQRankSum=4.181;POSITIVE_TRAIN_SITE;QD=1.79;R2_5P_bias=1.228;ReadPosRankSum=3.689;SOR=0.458;VQSLOD=10.3;culprit=FS	GT:AD:AF:DP:F1R2:F2R1:GQ:PL:GP:PRI:SB:MB	0/1:9,19:0.679:28:6,7:3,12:44:85,0,42:50,0.0001714,45.31:0,34.77,37.77:6,3,11,8:3,6,7,12
+1	225618159	.	G	A	121.71	PASS	AC=2;AF=1;AN=2;DP=25;FS=0;FractionInformativeReads=1;MQ=250;POSITIVE_TRAIN_SITE;QD=4.87;SOR=0.77;VQSLOD=9.92;culprit=FS	GT:AD:AF:DP:F1R2:F2R1:GQ:PL:GP:PRI:SB:MB	1/1:0,25:1:25:0,11:0,14:72:159,75,0:121.7,71.71,2.589e-07:0,34.77,37.77:0,0,13,12:0,0,13,12
+1	230630978	.	C	T	50	PASS	AC=1;AF=0.5;AN=2;DP=25;FS=0;FractionInformativeReads=1;MQ=250;MQRankSum=4.133;POSITIVE_TRAIN_SITE;QD=2;R2_5P_bias=10.348;ReadPosRankSum=2.025;SOR=0.999;VQSLOD=10.04;culprit=FS	GT:AD:AF:DP:F1R2:F2R1:GQ:PL:GP:PRI:SB:MB	0/1:10,15:0.6:25:4,7:6,8:47:85,0,48:50,7.921e-05,50.83:0,34.77,37.77:4,6,5,10:2,8,7,8
+2	23713107	.	T	C	50	PASS	AC=1;AF=0.5;AN=2;DP=40;FS=6.483;FractionInformativeReads=1;MQ=250;MQRankSum=5.39;POSITIVE_TRAIN_SITE;QD=1.25;R2_5P_bias=13.031;ReadPosRankSum=1.49;SOR=0.727;VQSLOD=8.54;culprit=MQRankSum	GT:AD:AF:DP:F1R2:F2R1:GQ:PL:GP:PRI:SB:MB	0/1:19,21:0.525:40:11,5:8,16:48:85,0,50:50,6.627e-05,52.78:0,34.77,37.77:7,12,12,9:11,8,10,11
+2	26700700	.	G	A	50	PASS	AC=1;AF=0.5;AN=2;DP=31;FS=0;FractionInformativeReads=1;MQ=250;MQRankSum=4.603;POSITIVE_TRAIN_SITE;QD=1.61;R2_5P_bias=-2.465;ReadPosRankSum=3.224;SOR=0.91;VQSLOD=10.46;culprit=FS	GT:AD:AF:DP:F1R2:F2R1:GQ:PL:GP:PRI:SB:MB	0/1:12,19:0.613:31:8,5:4,14:47:85,0,47:50,9.138e-05,49.58:0,34.77,37.77:7,5,12,7:7,5,6,13
+2	31061298	.	T	C	107.2	PASS	AC=2;AF=1;AN=2;DP=20;FS=0;FractionInformativeReads=1;MQ=250;POSITIVE_TRAIN_SITE;QD=5.36;SOR=0.892;VQSLOD=10.34;culprit=FS	GT:AD:AF:DP:F1R2:F2R1:GQ:PL:GP:PRI:SB:MB	1/1:0,20:1:20:0,8:0,12:57:145,60,0:107.2,57.2,8.284e-06:0,34.77,37.77:0,0,11,9:0,0,11,9
+2	39817956	.	G	C	49.46	PASS	AC=1;AF=0.5;AN=2;DP=16;FS=0;FractionInformativeReads=1;MQ=250;MQRankSum=3.281;POSITIVE_TRAIN_SITE;QD=3.09;R2_5P_bias=-7.196;ReadPosRankSum=1.588;SOR=0.814;VQSLOD=9.99;culprit=QD	GT:AD:AF:DP:F1R2:F2R1:GQ:PL:GP:PRI:SB:MB	0/1:9,7:0.438:16:2,3:7,4:48:84,0,50:49.46,7.093e-05,53:0,34.77,37.77:5,4,3,4:4,5,5,2
+2	127952263	.	T	C	50	PASS	AC=1;AF=0.5;AN=2;DP=29;FS=3.319;FractionInformativeReads=1;MQ=250;MQRankSum=4.539;POSITIVE_TRAIN_SITE;QD=1.72;R2_5P_bias=13.853;ReadPosRankSum=2.916;SOR=1.402;VQSLOD=10.1;culprit=FS	GT:AD:AF:DP:F1R2:F2R1:GQ:PL:GP:PRI:SB:MB	0/1:13,16:0.552:29:8,5:5,11:48:85,0,49:50,6.886e-05,52.32:0,34.77,37.77:7,6,11,5:8,5,8,8
+2	134624276	.	T	C	50	PASS	AC=1;AF=0.5;AN=2;DP=22;FS=0;FractionInformativeReads=1;MQ=250;MQRankSum=3.94;POSITIVE_TRAIN_SITE;QD=2.27;R2_5P_bias=-0.273;ReadPosRankSum=2.167;SOR=0.74;VQSLOD=10.34;culprit=FS	GT:AD:AF:DP:F1R2:F2R1:GQ:PL:GP:PRI:SB:MB	0/1:11,11:0.5:22:4,6:7,5:48:85,0,50:50,6.523e-05,52.99:0,34.77,37.77:6,5,5,6:7,4,6,5
+2	142013612	.	T	G	50	PASS	AC=1;AF=0.5;AN=2;DP=16;FS=0;FractionInformativeReads=1;MQ=250;MQRankSum=3.308;POSITIVE_TRAIN_SITE;QD=3.12;R2_5P_bias=-14.318;ReadPosRankSum=1.838;SOR=0.693;VQSLOD=9.98;culprit=QD	GT:AD:AF:DP:F1R2:F2R1:GQ:PL:GP:PRI:SB:MB	0/1:8,8:0.5:16:7,2:1,6:48:85,0,50:50,6.523e-05,53:0,34.77,37.77:5,3,5,3:4,4,3,5
+2	164468414	.	T	C	121.7	PASS	AC=2;AF=1;AN=2;DP=25;FS=0;FractionInformativeReads=1;MQ=250;POSITIVE_TRAIN_SITE;QD=4.87;SOR=1.136;VQSLOD=11.69;culprit=FS	GT:AD:AF:DP:F1R2:F2R1:GQ:PL:GP:PRI:SB:MB	1/1:0,25:1:25:0,14:0,11:72:159,75,0:121.7,71.7,2.589e-07:0,34.77,37.77:0,0,10,15:0,0,15,10
+2	202082459	.	T	A	50	PASS	AC=1;AF=0.5;AN=2;DP=33;FS=0;FractionInformativeReads=1;MQ=250;MQRankSum=4.602;POSITIVE_TRAIN_SITE;QD=1.52;R2_5P_bias=-23.61;ReadPosRankSum=2.234;SOR=0.941;VQSLOD=9.86;culprit=FS	GT:AD:AF:DP:F1R2:F2R1:GQ:PL:GP:PRI:SB:MB	0/1:11,22:0.667:33:2,8:9,14:44:85,0,42:50,0.0001835,44.92:0,34.77,37.77:4,7,7,15:7,4,13,9
+2	234183368	.	A	G	49.88	PASS	AC=1;AF=0.5;AN=2;DP=17;FS=1.957;FractionInformativeReads=1;MQ=250;MQRankSum=3.416;POSITIVE_TRAIN_SITE;QD=2.93;R2_5P_bias=2.608;ReadPosRankSum=3.416;SOR=1.08;VQSLOD=10.02;culprit=QD	GT:AD:AF:DP:F1R2:F2R1:GQ:PL:GP:PRI:SB:MB	0/1:9,8:0.471:17:4,3:5,5:48:85,0,50:49.88,6.653e-05,53:0,34.77,37.77:5,4,3,5:6,3,6,2
+3	46480958	.	C	G	50	PASS	AC=1;AF=0.5;AN=2;DP=26;FS=3.442;FractionInformativeReads=1;MQ=250;MQRankSum=4.256;POSITIVE_TRAIN_SITE;QD=1.92;R2_5P_bias=7.929;ReadPosRankSum=0.986;SOR=0.505;VQSLOD=10.05;culprit=ReadPosRankSum	GT:AD:AF:DP:F1R2:F2R1:GQ:PL:GP:PRI:SB:MB	0/1:11,15:0.577:26:7,8:4,7:48:85,0,49:50,7.3e-05,51.68:0,34.77,37.77:7,4,7,8:3,8,8,7
+3	61922940	.	G	A	50	PASS	AC=1;AF=0.5;AN=2;DP=18;FS=0;FractionInformativeReads=1;MQ=246.63;MQRankSum=2.737;POSITIVE_TRAIN_SITE;QD=2.78;R2_5P_bias=14.361;ReadPosRankSum=3.002;SOR=1.14;VQSLOD=4.42;culprit=FS	GT:AD:AF:DP:F1R2:F2R1:GQ:PL:GP:PRI:SB:MB	0/1:9,9:0.5:18:3,5:6,4:48:85,0,50:50,6.523e-05,53:0,34.77,37.77:5,4,6,3:3,6,4,5
+3	140947647	.	T	G	98.11	PASS	AC=2;AF=1;AN=2;DP=17;FS=0;FractionInformativeReads=1;MQ=250;POSITIVE_TRAIN_SITE;QD=5.77;SOR=1.061;VQSLOD=11.34;culprit=FS	GT:AD:AF:DP:F1R2:F2R1:GQ:PL:GP:PRI:SB:MB	1/1:0,17:1:17:0,9:0,8:48:136,51,0:98.11,48.11,6.705e-05:0,34.77,37.77:0,0,10,7:0,0,6,11
+3	167000256	.	G	C	47.38	PASS	AC=1;AF=0.5;AN=2;DP=21;FS=4.359;FractionInformativeReads=1;MQ=250;MQRankSum=3.73;POSITIVE_TRAIN_SITE;QD=2.26;R2_5P_bias=-2.421;ReadPosRankSum=2.281;SOR=1.826;VQSLOD=9.63;culprit=SOR	GT:AD:AF:DP:F1R2:F2R1:GQ:PL:GP:PRI:SB:MB	0/1:13,8:0.381:21:8,5:5,3:46:82,0,50:47.38,0.0001012,53:0,34.77,37.77:7,6,2,6:4,9,3,5
+3	167023738	.	G	C	50	PASS	AC=1;AF=0.5;AN=2;DP=15;FS=0;FractionInformativeReads=1;MQ=250;MQRankSum=3.366;POSITIVE_TRAIN_SITE;QD=3.33;R2_5P_bias=6.458;ReadPosRankSum=2.04;SOR=0.892;VQSLOD=9.13;culprit=QD	GT:AD:AF:DP:F1R2:F2R1:GQ:PL:GP:PRI:SB:MB	0/1:7,8:0.533:15:4,6:3,2:48:85,0,50:50,6.627e-05,52.79:0,34.77,37.77:3,4,3,5:2,5,3,5
+3	190578566	.	A	G	49.64	PASS	AC=1;AF=0.5;AN=2;DP=21;FS=1.922;FractionInformativeReads=0.952;MQ=250;MQRankSum=3.723;POSITIVE_TRAIN_SITE;QD=2.36;R2_5P_bias=17.313;ReadPosRankSum=0.912;SOR=0.25;VQSLOD=9.83;culprit=ReadPosRankSum	GT:AD:AF:DP:F1R2:F2R1:GQ:PL:GP:PRI:SB:MB	0/1:11,9:0.45:20:4,5:7,4:48:84,0,50:49.64,6.886e-05,53:0,34.77,37.77:8,3,5,4:5,6,3,6
+3	194353875	.	G	T	164.18	PASS	AC=2;AF=1;AN=2;DP=39;FS=0;FractionInformativeReads=1;MQ=250;POSITIVE_TRAIN_SITE;QD=4.21;SOR=1.73;VQSLOD=8.48;culprit=QD	GT:AD:AF:DP:F1R2:F2R1:GQ:PL:GP:PRI:SB:MB	1/1:0,39:1:39:0,14:0,25:114:202,117,0:164.2,114.2,0:0,34.77,37.77:0,0,12,27:0,0,21,18
+4	7655855	.	C	T	162.43	PASS	AC=2;AF=1;AN=2;DP=39;FS=0;FractionInformativeReads=1;MQ=250;POSITIVE_TRAIN_SITE;QD=4.16;SOR=0.85;VQSLOD=10.39;culprit=QD	GT:AD:AF:DP:F1R2:F2R1:GQ:PL:GP:PRI:SB:MB	1/1:0,39:1:39:0,25:0,14:112:200,115,0:162.4,112.4,0:0,34.77,37.77:0,0,21,18:0,0,17,22
+4	25740206	.	C	T	122.15	PASS	AC=2;AF=1;AN=2;DP=25;FS=0;FractionInformativeReads=1;MQ=250;POSITIVE_TRAIN_SITE;QD=4.89;SOR=0.941;VQSLOD=10.47;culprit=FS	GT:AD:AF:DP:F1R2:F2R1:GQ:PL:GP:PRI:SB:MB	1/1:0,25:1:25:0,17:0,8:72:160,75,0:122.2,72.15,2.589e-07:0,34.77,37.77:0,0,11,14:0,0,11,14
+4	41015899	.	C	T	50	PASS	AC=1;AF=0.5;AN=2;DP=30;FS=1.455;FractionInformativeReads=1;MQ=250;MQRankSum=4.646;POSITIVE_TRAIN_SITE;QD=1.67;R2_5P_bias=9.513;ReadPosRankSum=0.622;SOR=1.041;VQSLOD=9.75;culprit=ReadPosRankSum	GT:AD:AF:DP:F1R2:F2R1:GQ:PL:GP:PRI:SB:MB	0/1:15,15:0.5:30:9,7:6,8:48:85,0,50:50,6.523e-05,53:0,34.77,37.77:7,8,9,6:7,8,5,10
+4	179115387	.	A	G	98.14	PASS	AC=2;AF=1;AN=2;DP=17;FS=0;FractionInformativeReads=1;MQ=250;POSITIVE_TRAIN_SITE;QD=5.77;SOR=0.804;VQSLOD=11.12;culprit=FS	GT:AD:AF:DP:F1R2:F2R1:GQ:PL:GP:PRI:SB:MB	1/1:0,17:1:17:0,7:0,10:48:136,51,0:98.14,48.14,6.653e-05:0,34.77,37.77:0,0,8,9:0,0,10,7
+5	1115398	.	C	T	50	PASS	AC=1;AF=0.5;AN=2;DP=34;FS=7.319;FractionInformativeReads=1;MQ=250;MQRankSum=4.951;POSITIVE_TRAIN_SITE;QD=1.47;R2_5P_bias=-13.083;ReadPosRankSum=2.467;SOR=0.556;VQSLOD=9.11;culprit=MQRankSum	GT:AD:AF:DP:F1R2:F2R1:GQ:PL:GP:PRI:SB:MB	0/1:16,18:0.529:34:6,7:10,11:48:85,0,50:50,6.653e-05,52.75:0,34.77,37.77:11,5,8,10:9,7,9,9
+5	81743961	.	A	C	50	PASS	AC=1;AF=0.5;AN=2;DP=15;FS=0;FractionInformativeReads=1;MQ=250;MQRankSum=2.807;POSITIVE_TRAIN_SITE;QD=3.33;R2_5P_bias=-0.636;ReadPosRankSum=2.415;SOR=0.859;VQSLOD=8.25;culprit=QD	GT:AD:AF:DP:F1R2:F2R1:GQ:PL:GP:PRI:SB:MB	0/1:4,11:0.733:15:3,6:1,5:45:85,0,43:50,0.000154,45.95:0,34.77,37.77:2,2,6,5:1,3,7,4
+5	129820038	.	G	A	86.1	PASS	AC=2;AF=1;AN=2;DP=13;FS=0;FractionInformativeReads=1;MQ=250;POSITIVE_TRAIN_SITE;QD=6.62;SOR=2.147;VQSLOD=9.46;culprit=QD	GT:AD:AF:DP:F1R2:F2R1:GQ:PL:GP:PRI:SB:MB	1/1:0,13:1:13:0,3:0,10:36:124,39,0:86.1,36.1,0.001066:0,34.77,37.77:0,0,10,3:0,0,2,11
+5	131676320	.	C	T	122.19	PASS	AC=2;AF=1;AN=2;DP=25;FS=0;FractionInformativeReads=1;MQ=250;POSITIVE_TRAIN_SITE;QD=4.89;SOR=3.014;VQSLOD=8.11;culprit=SOR	GT:AD:AF:DP:F1R2:F2R1:GQ:PL:GP:PRI:SB:MB	1/1:0,25:1:25:0,13:0,12:72:160,75,0:122.2,72.19,2.589e-07:0,34.77,37.77:0,0,21,4:0,0,15,10
+5	169400752	.	A	C	48.21	PASS	AC=1;AF=0.5;AN=2;DP=20;FS=1.871;FractionInformativeReads=1;MQ=248.15;MQRankSum=2.739;POSITIVE_TRAIN_SITE;QD=2.41;R2_5P_bias=-11.696;ReadPosRankSum=-1.35;SOR=1.034;VQSLOD=3.4;culprit=ReadPosRankSum	GT:AD:AF:DP:F1R2:F2R1:GQ:PL:GP:PRI:SB:MB	0/1:12,8:0.4:20:6,2:6,6:47:83,0,50:48.21,8.724e-05,53:0,34.77,37.77:7,5,3,5:7,5,5,3
+5	175080229	.	C	T	50	PASS	AC=1;AF=0.5;AN=2;DP=31;FS=5.632;FractionInformativeReads=1;MQ=250;MQRankSum=4.603;POSITIVE_TRAIN_SITE;QD=1.61;R2_5P_bias=7.321;ReadPosRankSum=1.683;SOR=0.735;VQSLOD=9.98;culprit=FS	GT:AD:AF:DP:F1R2:F2R1:GQ:PL:GP:PRI:SB:MB	0/1:12,19:0.613:31:8,6:4,13:47:85,0,47:50,9.164e-05,49.55:0,34.77,37.77:4,8,11,8:6,6,8,11
+5	179569483	.	A	G	50	PASS	AC=1;AF=0.5;AN=2;DP=38;FS=1.283;FractionInformativeReads=1;MQ=248.59;MQRankSum=4.727;POSITIVE_TRAIN_SITE;QD=1.32;R2_5P_bias=-26.433;ReadPosRankSum=1.35;SOR=0.454;VQSLOD=4.61;culprit=QD	GT:AD:AF:DP:F1R2:F2R1:GQ:PL:GP:PRI:SB:MB	0/1:17,21:0.553:38:9,15:8,6:48:85,0,49:50,7.015e-05,52.09:0,34.77,37.77:6,11,9,12:10,7,11,10
+6	9903626	.	C	T	50	PASS	AC=1;AF=0.5;AN=2;DP=29;FS=13.601;FractionInformativeReads=1;MQ=250;MQRankSum=4.427;POSITIVE_TRAIN_SITE;QD=1.72;R2_5P_bias=9.584;ReadPosRankSum=1.236;SOR=0.033;VQSLOD=5.84;culprit=FS	GT:AD:AF:DP:F1R2:F2R1:GQ:PL:GP:PRI:SB:MB	0/1:11,18:0.621:29:3,7:8,11:47:85,0,46:50,9.578e-05,49.2:0,34.77,37.77:10,1,9,9:4,7,6,12
+6	19893852	.	A	C	49.95	PASS	AC=1;AF=0.5;AN=2;DP=43;FS=2.704;FractionInformativeReads=1;MQ=250;MQRankSum=5.6;POSITIVE_TRAIN_SITE;QD=1.16;R2_5P_bias=-3.185;ReadPosRankSum=1.907;SOR=1.258;VQSLOD=7.55;culprit=MQRankSum	GT:AD:AF:DP:F1R2:F2R1:GQ:PL:GP:PRI:SB:MB:PS	0|1:22,21:0.488:43:11,10:11,11:48:85,0,50:49.95,6.575e-05,53:0,34.77,37.77:10,12,7,14:13,9,12,9:19893817
+6	74033034	.	G	A	50	PASS	AC=1;AF=0.5;AN=2;DP=25;FS=0;FractionInformativeReads=1;MQ=250;MQRankSum=3.783;POSITIVE_TRAIN_SITE;QD=2;R2_5P_bias=8.5;ReadPosRankSum=1.241;SOR=1.179;VQSLOD=8.92;culprit=FS	GT:AD:AF:DP:F1R2:F2R1:GQ:PL:GP:PRI:SB:MB	0/1:7,18:0.72:25:2,10:5,8:41:85,0,39:50,0.0003081,42.15:0,34.77,37.77:5,2,14,4:4,3,8,10
+7	6590670	.	C	T	118.68	PASS	AC=2;AF=1;AN=2;DP=24;FS=0;FractionInformativeReads=1;MQ=250;POSITIVE_TRAIN_SITE;QD=4.94;SOR=1.802;VQSLOD=10.42;culprit=FS	GT:AD:AF:DP:F1R2:F2R1:GQ:PL:GP:PRI:SB:MB:PS	1|1:0,24:1:24:0,11:0,13:69:156,72,0:118.7,68.68,5.177e-07:0,34.77,37.77:0,0,7,17:0,0,12,12:6590670
+7	50313352	.	G	A	50	PASS	AC=1;AF=0.5;AN=2;DP=27;FS=0;FractionInformativeReads=1;MQ=250;MQRankSum=4.318;POSITIVE_TRAIN_SITE;QD=1.85;R2_5P_bias=12.962;ReadPosRankSum=0.617;SOR=0.551;VQSLOD=10.11;culprit=ReadPosRankSum	GT:AD:AF:DP:F1R2:F2R1:GQ:PL:GP:PRI:SB:MB	0/1:11,16:0.593:27:3,8:8,8:47:85,0,48:50,7.818e-05,50.96:0,34.77,37.77:5,6,8,8:7,4,12,4
+8	13327683	.	T	C	50	PASS	AC=1;AF=0.5;AN=2;DP=23;FS=0;FractionInformativeReads=1;MQ=247.43;MQRankSum=3.116;POSITIVE_TRAIN_SITE;QD=2.17;R2_5P_bias=0.397;ReadPosRankSum=-1.015;SOR=0.804;VQSLOD=4.23;culprit=ReadPosRankSum	GT:AD:AF:DP:F1R2:F2R1:GQ:PL:GP:PRI:SB:MB:PS	0|1:6,17:0.739:23:1,9:5,8:41:85,0,38:50,0.0003798,41.11:0,34.77,37.77:3,3,8,9:2,4,8,9:13327678
+8	13677699	.	C	T	122.19	PASS	AC=2;AF=1;AN=2;DP=25;FS=0;FractionInformativeReads=1;MQ=250;POSITIVE_TRAIN_SITE;QD=4.89;SOR=0.77;VQSLOD=10.63;culprit=FS	GT:AD:AF:DP:F1R2:F2R1:GQ:PL:GP:PRI:SB:MB:PS	1|1:0,25:1:25:0,9:0,16:72:160,75,0:122.2,72.19,2.589e-07:0,34.77,37.77:0,0,12,13:0,0,12,13:13677695
+8	17930772	.	C	T	113.14	PASS	AC=2;AF=1;AN=2;DP=23;FS=0;FractionInformativeReads=0.957;MQ=250;POSITIVE_TRAIN_SITE;QD=4.92;SOR=0.874;VQSLOD=11.55;culprit=FS	GT:AD:AF:DP:F1R2:F2R1:GQ:PL:GP:PRI:SB:MB	1/1:0,22:1:22:0,15:0,7:63:151,66,0:113.1,63.14,2.071e-06:0,34.77,37.77:0,0,12,10:0,0,9,13
+8	21557285	.	C	T	49.93	PASS	AC=1;AF=0.5;AN=2;DP=29;FS=3.352;FractionInformativeReads=1;MQ=250;MQRankSum=4.561;POSITIVE_TRAIN_SITE;QD=1.72;R2_5P_bias=4.148;ReadPosRankSum=2.859;SOR=1.272;VQSLOD=10.14;culprit=FS	GT:AD:AF:DP:F1R2:F2R1:GQ:PL:GP:PRI:SB:MB	0/1:15,14:0.483:29:7,8:8,6:48:85,0,50:49.93,6.601e-05,53:0,34.77,37.77:7,8,9,5:7,8,7,7
+8	104427359	.	A	C	46.99	PASS	AC=1;AF=0.5;AN=2;DP=46;FS=0;FractionInformativeReads=1;MQ=250;MQRankSum=5.711;POSITIVE_TRAIN_SITE;QD=1.02;R2_5P_bias=24.908;ReadPosRankSum=4.194;SOR=0.587;VQSLOD=7.22;culprit=MQRankSum	GT:AD:AF:DP:F1R2:F2R1:GQ:PL:GP:PRI:SB:MB	0/1:27,19:0.413:46:15,10:12,9:46:82,0,50:46.99,0.0001087,53:0,34.77,37.77:15,12,10,9:15,12,7,12
+8	129492318	.	A	G	97.67	PASS	AC=2;AF=1;AN=2;DP=17;FS=0;FractionInformativeReads=1;MQ=250;POSITIVE_TRAIN_SITE;QD=5.75;SOR=0.804;VQSLOD=11.17;culprit=FS	GT:AD:AF:DP:F1R2:F2R1:GQ:PL:GP:PRI:SB:MB	1/1:0,17:1:17:0,10:0,7:48:135,51,0:97.67,47.67,7.429e-05:0,34.77,37.77:0,0,8,9:0,0,11,6
+8	133124902	.	T	G	122.16	PASS	AC=2;AF=1;AN=2;DP=25;FS=0;FractionInformativeReads=1;MQ=250;POSITIVE_TRAIN_SITE;QD=4.89;SOR=0.77;VQSLOD=11.01;culprit=FS	GT:AD:AF:DP:F1R2:F2R1:GQ:PL:GP:PRI:SB:MB	1/1:0,25:1:25:0,14:0,11:72:160,75,0:122.2,72.16,2.589e-07:0,34.77,37.77:0,0,12,13:0,0,9,16
+9	271638	.	C	T	119.12	PASS	AC=2;AF=1;AN=2;DP=24;FS=0;FractionInformativeReads=1;MQ=244.83;POSITIVE_TRAIN_SITE;QD=4.96;SOR=0.859;VQSLOD=6.07;culprit=MQ	GT:AD:AF:DP:F1R2:F2R1:GQ:PL:GP:PRI:SB:MB	1/1:0,24:1:24:0,15:0,9:69:157,72,0:119.1,69.12,5.177e-07:0,34.77,37.77:0,0,11,13:0,0,10,14
+9	8974353	.	T	C	46.71	PASS	AC=1;AF=0.5;AN=2;DP=24;FS=3.949;FractionInformativeReads=1;MQ=249.59;MQRankSum=3.101;POSITIVE_TRAIN_SITE;QD=1.95;R2_5P_bias=-0.143;ReadPosRankSum=2.266;SOR=0.552;VQSLOD=4.86;culprit=MQRankSum	GT:AD:AF:DP:F1R2:F2R1:GQ:PL:GP:PRI:SB:MB	0/1:15,9:0.375:24:6,6:9,3:46:81,0,50:46.71,0.0001144,53:0,34.77,37.77:5,10,5,4:8,7,6,3
+9	31178755	.	C	T	50	PASS	AC=1;AF=0.5;AN=2;DP=16;FS=0;FractionInformativeReads=0.938;MQ=250;MQRankSum=3.001;POSITIVE_TRAIN_SITE;QD=3.13;R2_5P_bias=8.863;ReadPosRankSum=2.511;SOR=0.743;VQSLOD=9.29;culprit=QD	GT:AD:AF:DP:F1R2:F2R1:GQ:PL:GP:PRI:SB:MB	0/1:5,10:0.667:15:2,5:3,5:47:85,0,46:50,9.397e-05,49.34:0,34.77,37.77:3,2,6,4:2,3,3,7
+9	139279173	.	G	A	49.18	PASS	AC=1;AF=0.5;AN=2;DP=21;FS=0;FractionInformativeReads=1;MQ=250;MQRankSum=3.802;POSITIVE_TRAIN_SITE;QD=2.34;R2_5P_bias=0.327;ReadPosRankSum=1.173;SOR=1.002;VQSLOD=10.11;culprit=FS	GT:AD:AF:DP:F1R2:F2R1:GQ:PL:GP:PRI:SB:MB	0/1:12,9:0.429:21:6,3:6,6:48:84,0,50:49.18,7.429e-05,53:0,34.77,37.77:7,5,6,3:5,7,6,3
+10	11388843	.	T	C	127.75	PASS	AC=2;AF=1;AN=2;DP=27;FS=0;FractionInformativeReads=1;MQ=250;POSITIVE_TRAIN_SITE;QD=4.73;SOR=2.387;VQSLOD=9.78;culprit=SOR	GT:AD:AF:DP:F1R2:F2R1:GQ:PL:GP:PRI:SB:MB	1/1:0,27:1:27:0,12:0,15:78:166,81,0:127.8,77.75,0:0,34.77,37.77:0,0,6,21:0,0,13,14
+10	12621240	.	C	G	49.93	PASS	AC=1;AF=0.5;AN=2;DP=31;FS=0;FractionInformativeReads=1;MQ=250;MQRankSum=4.724;POSITIVE_TRAIN_SITE;QD=1.61;R2_5P_bias=-0.128;ReadPosRankSum=4.724;SOR=0.818;VQSLOD=10.29;culprit=ReadPosRankSum	GT:AD:AF:DP:F1R2:F2R1:GQ:PL:GP:PRI:SB:MB	0/1:16,15:0.484:31:6,6:10,9:48:85,0,50:49.93,6.601e-05,53:0,34.77,37.77:8,8,8,7:8,8,11,4
+10	50681033	.	G	A	50	PASS	AC=1;AF=0.5;AN=2;DP=37;FS=3.055;FractionInformativeReads=1;MQ=250;MQRankSum=5.026;POSITIVE_TRAIN_SITE;QD=1.35;R2_5P_bias=12.165;ReadPosRankSum=3.617;SOR=1.317;VQSLOD=9.5;culprit=MQRankSum	GT:AD:AF:DP:F1R2:F2R1:GQ:PL:GP:PRI:SB:MB	0/1:14,23:0.622:37:9,10:5,13:46:85,0,45:50,0.0001092,48.19:0,34.77,37.77:6,8,7,16:5,9,12,11
+10	86273249	.	T	C	50	PASS	AC=1;AF=0.5;AN=2;DP=32;FS=1.475;FractionInformativeReads=1;MQ=250;MQRankSum=4.452;POSITIVE_TRAIN_SITE;QD=1.56;R2_5P_bias=8.946;ReadPosRankSum=2.907;SOR=0.412;VQSLOD=9.82;culprit=FS	GT:AD:AF:DP:F1R2:F2R1:GQ:PL:GP:PRI:SB:MB	0/1:10,22:0.688:32:6,14:4,8:42:85,0,40:50,0.0002876,42.5:0,34.77,37.77:4,6,11,11:4,6,9,13
+11	7283776	.	G	A	47.97	PASS	AC=1;AF=0.5;AN=2;DP=25;FS=0;FractionInformativeReads=1;MQ=250;MQRankSum=4.133;POSITIVE_TRAIN_SITE;QD=1.92;R2_5P_bias=10.17;ReadPosRankSum=4.133;SOR=0.936;VQSLOD=9.81;culprit=ReadPosRankSum	GT:AD:AF:DP:F1R2:F2R1:GQ:PL:GP:PRI:SB:MB	0/1:15,10:0.4:25:11,6:4,4:47:83,0,50:47.97,9.112e-05,53:0,34.77,37.77:8,7,6,4:6,9,6,4
+11	7712471	.	C	T	50	PASS	AC=1;AF=0.5;AN=2;DP=40;FS=2.794;FractionInformativeReads=1;MQ=250;MQRankSum=5.369;POSITIVE_TRAIN_SITE;QD=1.25;R2_5P_bias=-7.346;ReadPosRankSum=3.113;SOR=0.34;VQSLOD=9.3;culprit=MQRankSum	GT:AD:AF:DP:F1R2:F2R1:GQ:PL:GP:PRI:SB:MB	0/1:18,22:0.55:40:8,16:10,6:48:85,0,49:50,7.041e-05,52.05:0,34.77,37.77:6,12,10,12:10,8,10,12
+11	7727886	.	C	T	48.95	PASS	AC=1;AF=0.5;AN=2;DP=19;FS=11.311;FractionInformativeReads=1;MQ=250;MQRankSum=3.592;POSITIVE_TRAIN_SITE;QD=2.58;R2_5P_bias=-18.848;ReadPosRankSum=1.775;SOR=0.85;VQSLOD=8.39;culprit=FS	GT:AD:AF:DP:F1R2:F2R1:GQ:PL:GP:PRI:SB:MB	0/1:11,8:0.421:19:7,5:4,3:48:84,0,50:48.95,7.714e-05,53:0,34.77,37.77:9,2,3,5:7,4,2,6
+11	60704213	.	C	T	167.24	PASS	AC=2;AF=1;AN=2;DP=40;FS=0;FractionInformativeReads=1;MQ=250;POSITIVE_TRAIN_SITE;QD=4.18;SOR=0.793;VQSLOD=9.36;culprit=QD	GT:AD:AF:DP:F1R2:F2R1:GQ:PL:GP:PRI:SB:MB	1/1:0,40:1:40:0,20:0,20:117:205,120,0:167.2,117.2,0:0,34.77,37.77:0,0,19,21:0,0,21,19
+11	68840160	.	A	G	50	PASS	AC=1;AF=0.5;AN=2;DP=43;FS=1.172;FractionInformativeReads=1;MQ=250;MQRankSum=5.6;POSITIVE_TRAIN_SITE;QD=1.16;R2_5P_bias=-2.021;ReadPosRankSum=1.664;SOR=0.805;VQSLOD=8.11;culprit=MQRankSum	GT:AD:AF:DP:F1R2:F2R1:GQ:PL:GP:PRI:SB:MB	0/1:21,22:0.512:43:13,11:8,11:48:85,0,50:50,6.549e-05,52.95:0,34.77,37.77:11,10,10,12:9,12,11,11
+11	74137551	.	C	A	49.62	PASS	AC=1;AF=0.5;AN=2;DP=22;FS=1.707;FractionInformativeReads=1;MQ=250;MQRankSum=3.923;POSITIVE_TRAIN_SITE;QD=2.26;R2_5P_bias=12.73;ReadPosRankSum=1.879;SOR=1.179;VQSLOD=10.16;culprit=FS	GT:AD:AF:DP:F1R2:F2R1:GQ:PL:GP:PRI:SB:MB	0/1:12,10:0.455:22:9,3:3,7:48:84,0,50:49.62,6.912e-05,53:0,34.77,37.77:5,7,3,7:8,4,4,6
+11	118952173	.	A	G	48.92	PASS	AC=1;AF=0.5;AN=2;DP=36;FS=2.788;FractionInformativeReads=1;MQ=250;MQRankSum=5.078;POSITIVE_TRAIN_SITE;QD=1.36;R2_5P_bias=5.398;ReadPosRankSum=2.022;SOR=0.814;VQSLOD=9.95;culprit=MQRankSum	GT:AD:AF:DP:F1R2:F2R1:GQ:PL:GP:PRI:SB:MB	0/1:20,16:0.444:36:10,9:10,7:47:84,0,50:48.92,7.74e-05,53:0,34.77,37.77:11,9,7,9:11,9,10,6
+13	23874292	.	C	T	50	PASS	AC=1;AF=0.5;AN=2;DP=29;FS=3.352;FractionInformativeReads=1;MQ=250;MQRankSum=4.539;POSITIVE_TRAIN_SITE;QD=1.72;R2_5P_bias=-18.775;ReadPosRankSum=0.987;SOR=0.697;VQSLOD=9.48;culprit=ReadPosRankSum	GT:AD:AF:DP:F1R2:F2R1:GQ:PL:GP:PRI:SB:MB	0/1:13,16:0.552:29:5,6:8,10:48:85,0,49:50,6.886e-05,52.32:0,34.77,37.77:5,8,9,7:5,8,5,11
+13	114875618	.	G	C	122.17	PASS	AC=2;AF=1;AN=2;DP=25;FS=0;FractionInformativeReads=1;MQ=250;POSITIVE_TRAIN_SITE;QD=4.89;SOR=1.609;VQSLOD=10.16;culprit=FS	GT:AD:AF:DP:F1R2:F2R1:GQ:PL:GP:PRI:SB:MB	1/1:0,25:1:25:0,12:0,13:72:160,75,0:122.2,72.17,2.589e-07:0,34.77,37.77:0,0,17,8:0,0,12,13
+14	22392626	.	A	C	47.98	PASS	AC=1;AF=0.5;AN=2;DP=18;FS=0;FractionInformativeReads=1;MQ=250;MQRankSum=3.442;POSITIVE_TRAIN_SITE;QD=2.67;R2_5P_bias=12.067;ReadPosRankSum=2.626;SOR=0.832;VQSLOD=10.38;culprit=FS	GT:AD:AF:DP:F1R2:F2R1:GQ:PL:GP:PRI:SB:MB	0/1:11,7:0.389:18:5,1:6,6:47:83,0,50:47.98,9.086e-05,53:0,34.77,37.77:6,5,3,4:4,7,3,4
+14	50092471	.	T	C	92.08	PASS	AC=2;AF=1;AN=2;DP=15;FS=0;FractionInformativeReads=1;MQ=250;POSITIVE_TRAIN_SITE;QD=6.14;SOR=1.473;VQSLOD=10.94;culprit=QD	GT:AD:AF:DP:F1R2:F2R1:GQ:PL:GP:PRI:SB:MB	1/1:0,15:1:15:0,4:0,11:42:130,45,0:92.08,42.08,0.0002687:0,34.77,37.77:0,0,10,5:0,0,7,8
+14	88200168	.	G	A	137.27	PASS	AC=2;AF=1;AN=2;DP=30;FS=0;FractionInformativeReads=1;MQ=250;POSITIVE_TRAIN_SITE;QD=4.58;SOR=1.143;VQSLOD=11;culprit=FS	GT:AD:AF:DP:F1R2:F2R1:GQ:PL:GP:PRI:SB:MB	1/1:0,30:1:30:0,16:0,14:87:175,90,0:137.3,87.27,0:0,34.77,37.77:0,0,18,12:0,0,14,16
+15	40347236	.	G	T	50	PASS	AC=1;AF=0.5;AN=2;DP=32;FS=1.735;FractionInformativeReads=1;MQ=250;MQRankSum=4.719;POSITIVE_TRAIN_SITE;QD=1.56;R2_5P_bias=-4.583;ReadPosRankSum=2.954;SOR=0.33;VQSLOD=9.93;culprit=MQRankSum	GT:AD:AF:DP:F1R2:F2R1:GQ:PL:GP:PRI:SB:MB	0/1:13,19:0.594:32:7,11:6,8:47:85,0,48:50,8.051e-05,50.69:0,34.77,37.77:11,2,14,5:7,6,10,9
+15	59845640	.	G	A	49.81	PASS	AC=1;AF=0.5;AN=2;DP=36;FS=0;FractionInformativeReads=1;MQ=250;MQRankSum=5.102;POSITIVE_TRAIN_SITE;QD=1.38;R2_5P_bias=-6.25;ReadPosRankSum=0.127;SOR=0.527;VQSLOD=8.72;culprit=MQRankSum	GT:AD:AF:DP:F1R2:F2R1:GQ:PL:GP:PRI:SB:MB	0/1:19,17:0.472:36:9,11:10,6:48:85,0,50:49.81,6.73e-05,53:0,34.77,37.77:8,11,8,9:10,9,10,7
+16	6236409	.	G	A	49.76	PASS	AC=1;AF=0.5;AN=2;DP=20;FS=0;FractionInformativeReads=0.95;MQ=250;MQRankSum=3.633;POSITIVE_TRAIN_SITE;QD=2.49;R2_5P_bias=4.096;ReadPosRankSum=2.245;SOR=0.892;VQSLOD=10.42;culprit=FS	GT:AD:AF:DP:F1R2:F2R1:GQ:PL:GP:PRI:SB:MB	0/1:10,9:0.474:19:4,3:6,6:48:85,0,50:49.76,6.756e-05,53:0,34.77,37.77:5,5,5,4:5,5,5,4
+16	81242198	.	G	A	161.2	PASS	AC=2;AF=1;AN=2;DP=38;FS=0;FractionInformativeReads=1;MQ=250;POSITIVE_TRAIN_SITE;QD=4.24;SOR=0.693;VQSLOD=9.52;culprit=QD	GT:AD:AF:DP:F1R2:F2R1:GQ:PL:GP:PRI:SB:MB:PS	1|1:0,38:1:38:0,18:0,20:111:199,114,0:161.2,111.2,0:0,34.77,37.77:0,0,19,19:0,0,19,19:81242194
+17	136397	.	A	G	49.7	PASS	AC=1;AF=0.5;AN=2;DP=36;FS=3.05;FractionInformativeReads=1;MQ=250;MQRankSum=5.102;POSITIVE_TRAIN_SITE;QD=1.38;R2_5P_bias=-5.933;ReadPosRankSum=3.517;SOR=0.269;VQSLOD=9.68;culprit=MQRankSum	GT:AD:AF:DP:F1R2:F2R1:GQ:PL:GP:PRI:SB:MB	0/1:19,17:0.472:36:7,7:12,10:48:84,0,50:49.7,6.834e-05,53:0,34.77,37.77:6,13,8,9:10,9,10,7
+17	3446885	.	T	C	50	PASS	AC=1;AF=0.5;AN=2;DP=43;FS=1.242;FractionInformativeReads=0.977;MQ=250;MQRankSum=5.534;POSITIVE_TRAIN_SITE;QD=1.16;R2_5P_bias=-12.46;ReadPosRankSum=5.534;SOR=0.393;VQSLOD=8.21;culprit=MQRankSum	GT:AD:AF:DP:F1R2:F2R1:GQ:PL:GP:PRI:SB:MB	0/1:21,21:0.5:42:14,11:7,10:48:85,0,50:50,6.523e-05,53:0,34.77,37.77:14,7,12,9:11,10,8,13
+17	38064469	.	T	C	44.17	PASS	AC=1;AF=0.5;AN=2;DP=26;FS=0;FractionInformativeReads=1;MQ=250;MQRankSum=4.096;POSITIVE_TRAIN_SITE;QD=1.7;R2_5P_bias=3.027;ReadPosRankSum=2.641;SOR=0.773;VQSLOD=9.89;culprit=FS	GT:AD:AF:DP:F1R2:F2R1:GQ:PL:GP:PRI:SB:MB	0/1:17,9:0.346:26:8,2:9,7:44:79,0,50:44.17,0.0001882,53:0,34.77,37.77:8,9,4,5:11,6,3,6
+17	55540246	.	A	C	49.71	PASS	AC=1;AF=0.5;AN=2;DP=30;FS=3.312;FractionInformativeReads=1;MQ=250;MQRankSum=4.635;POSITIVE_TRAIN_SITE;QD=1.66;R2_5P_bias=-0.215;ReadPosRankSum=4.178;SOR=1.41;VQSLOD=10;culprit=ReadPosRankSum	GT:AD:AF:DP:F1R2:F2R1:GQ:PL:GP:PRI:SB:MB	0/1:16,14:0.467:30:10,5:6,9:48:84,0,50:49.71,6.808e-05,53:0,34.77,37.77:7,9,4,10:5,11,9,5
+18	3262784	.	C	T	167.14	PASS	AC=2;AF=1;AN=2;DP=41;FS=0;FractionInformativeReads=0.976;MQ=250;POSITIVE_TRAIN_SITE;QD=4.08;SOR=0.902;VQSLOD=9.38;culprit=DP	GT:AD:AF:DP:F1R2:F2R1:GQ:PL:GP:PRI:SB:MB	1/1:0,40:1:40:0,22:0,18:117:205,120,0:167.1,117.1,0:0,34.77,37.77:0,0,22,18:0,0,20,20
+18	55089715	.	T	C	86.1	PASS	AC=2;AF=1;AN=2;DP=13;FS=0;FractionInformativeReads=1;MQ=250;POSITIVE_TRAIN_SITE;QD=6.62;SOR=1.609;VQSLOD=9.82;culprit=QD	GT:AD:AF:DP:F1R2:F2R1:GQ:PL:GP:PRI:SB:MB	1/1:0,13:1:13:0,7:0,6:36:124,39,0:86.1,36.1,0.001066:0,34.77,37.77:0,0,4,9:0,0,4,9
+18	74102947	.	C	T	50	PASS	AC=1;AF=0.5;AN=2;DP=25;FS=1.685;FractionInformativeReads=1;MQ=250;MQRankSum=4.133;POSITIVE_TRAIN_SITE;QD=2;R2_5P_bias=-0.83;ReadPosRankSum=0.471;SOR=0.275;VQSLOD=9.99;culprit=ReadPosRankSum	GT:AD:AF:DP:F1R2:F2R1:GQ:PL:GP:PRI:SB:MB	0/1:10,15:0.6:25:8,8:2,7:47:85,0,48:50,7.921e-05,50.83:0,34.77,37.77:3,7,7,8:1,9,10,5
+18	75016750	.	C	T	50	PASS	AC=1;AF=0.5;AN=2;DP=33;FS=8.426;FractionInformativeReads=0.97;MQ=250;MQRankSum=4.652;POSITIVE_TRAIN_SITE;QD=1.52;R2_5P_bias=2.366;ReadPosRankSum=1.265;SOR=1.215;VQSLOD=9.04;culprit=FS	GT:AD:AF:DP:F1R2:F2R1:GQ:PL:GP:PRI:SB:MB	0/1:12,20:0.625:32:5,13:7,7:46:85,0,46:50,0.0001035,48.58:0,34.77,37.77:4,8,13,7:5,7,6,14
+19	846716	.	C	T	45.17	PASS	AC=1;AF=0.5;AN=2;DP=28;FS=6.786;FractionInformativeReads=1;MQ=249.75;MQRankSum=4.291;NEGATIVE_TRAIN_SITE;POSITIVE_TRAIN_SITE;QD=1.61;R2_5P_bias=11.681;ReadPosRankSum=4.291;SOR=0.105;VQSLOD=2.53;culprit=ReadPosRankSum	GT:AD:AF:DP:F1R2:F2R1:GQ:PL:GP:PRI:SB:MB	0/1:18,10:0.357:28:10,4:8,6:45:80,0,50:45.17,0.0001538,53:0,34.77,37.77:4,14,5,5:10,8,3,7
+19	1042809	.	A	G	196.81	PASS	AC=2;AF=1;AN=2;DP=50;FS=0;FractionInformativeReads=1;MQ=249.53;POSITIVE_TRAIN_SITE;QD=3.94;SOR=1.051;VQSLOD=3.34;culprit=DP	GT:AD:AF:DP:F1R2:F2R1:GQ:PL:GP:PRI:SB:MB	1/1:0,50:1:50:0,22:0,28:147:235,150,0:196.8,146.8,0:0,34.77,37.77:0,0,29,21:0,0,25,25
+19	33370070	.	A	G	50	PASS	AC=1;AF=0.5;AN=2;DP=40;FS=0;FractionInformativeReads=0.975;MQ=250;MQRankSum=5.31;POSITIVE_TRAIN_SITE;QD=1.25;R2_5P_bias=1.461;ReadPosRankSum=3.817;SOR=0.784;VQSLOD=9.27;culprit=MQRankSum	GT:AD:AF:DP:F1R2:F2R1:GQ:PL:GP:PRI:SB:MB:PS	0|1:18,21:0.538:39:7,6:11,15:48:85,0,50:50,6.782e-05,52.51:0,34.77,37.77:9,9,10,11:10,8,9,12:33370070
+19	35719020	.	C	T	47.39	PASS	AC=1;AF=0.5;AN=2;DP=41;FS=1.216;FractionInformativeReads=1;MQ=250;MQRankSum=5.385;POSITIVE_TRAIN_SITE;QD=1.16;R2_5P_bias=-11.58;ReadPosRankSum=4.406;SOR=0.678;VQSLOD=9.2;culprit=MQRankSum	GT:AD:AF:DP:F1R2:F2R1:GQ:PL:GP:PRI:SB:MB	0/1:24,17:0.415:41:11,9:13,8:46:82,0,50:47.39,0.000101,53:0,34.77,37.77:13,11,8,9:10,14,8,9
+19	44570393	.	C	A	97.66	PASS	AC=2;AF=1;AN=2;DP=17;FS=0;FractionInformativeReads=1;MQ=250;POSITIVE_TRAIN_SITE;QD=5.74;SOR=0.804;VQSLOD=10.31;culprit=FS	GT:AD:AF:DP:F1R2:F2R1:GQ:PL:GP:PRI:SB:MB	1/1:0,17:1:17:0,6:0,11:48:135,51,0:97.66,47.66,7.429e-05:0,34.77,37.77:0,0,8,9:0,0,9,8
+19	54327313	.	C	A	50	PASS	AC=1;AF=0.5;AN=2;DP=30;FS=1.509;FractionInformativeReads=1;MQ=250;MQRankSum=4.635;POSITIVE_TRAIN_SITE;QD=1.67;R2_5P_bias=10.162;ReadPosRankSum=3.471;SOR=1.23;VQSLOD=10.2;culprit=FS	GT:AD:AF:DP:F1R2:F2R1:GQ:PL:GP:PRI:SB:MB	0/1:14,16:0.533:30:8,8:6,8:48:85,0,50:50,6.679e-05,52.71:0,34.77,37.77:8,6,11,5:8,6,9,7
+20	5903323	.	G	A	50	PASS	AC=1;AF=0.5;AN=2;DP=19;FS=2.199;FractionInformativeReads=1;MQ=250;MQRankSum=3.592;POSITIVE_TRAIN_SITE;QD=2.63;R2_5P_bias=-4.008;ReadPosRankSum=3.014;SOR=1.781;VQSLOD=9.58;culprit=FS	GT:AD:AF:DP:F1R2:F2R1:GQ:PL:GP:PRI:SB:MB	0/1:8,11:0.579:19:4,2:4,9:48:85,0,49:50,7.119e-05,51.96:0,34.77,37.77:5,3,9,2:5,3,4,7
+20	22880315	.	T	C	42.87	PASS	AC=1;AF=0.5;AN=2;DP=20;FS=0;FractionInformativeReads=1;MQ=250;MQRankSum=3.423;POSITIVE_TRAIN_SITE;QD=2.14;R2_5P_bias=4.716;ReadPosRankSum=1.278;SOR=0.454;VQSLOD=9.38;culprit=FS	GT:AD:AF:DP:F1R2:F2R1:GQ:PL:GP:PRI:SB:MB	0/1:14,6:0.3:20:6,3:8,3:42:78,0,50:42.87,0.0002462,53:0,34.77,37.77:10,4,4,2:6,8,3,3
+20	42654560	.	G	A	50	PASS	AC=1;AF=0.5;AN=2;DP=28;FS=3.682;FractionInformativeReads=0.893;MQ=250;MQRankSum=4.215;POSITIVE_TRAIN_SITE;QD=1.79;R2_5P_bias=18.932;ReadPosRankSum=2.42;SOR=1.609;VQSLOD=9.51;culprit=FS	GT:AD:AF:DP:F1R2:F2R1:GQ:PL:GP:PRI:SB:MB	0/1:12,13:0.52:25:6,6:6,7:48:85,0,50:50,6.549e-05,52.94:0,34.77,37.77:6,6,4,9:6,6,9,4
+20	62194030	.	G	C	50	PASS	AC=1;AF=0.5;AN=2;DP=30;FS=1.485;FractionInformativeReads=1;MQ=250;MQRankSum=4.646;POSITIVE_TRAIN_SITE;QD=1.67;R2_5P_bias=-3.623;ReadPosRankSum=1.908;SOR=1.296;VQSLOD=9.95;culprit=FS	GT:AD:AF:DP:F1R2:F2R1:GQ:PL:GP:PRI:SB:MB	0/1:15,15:0.5:30:10,10:5,5:48:85,0,50:50,6.523e-05,53:0,34.77,37.77:8,7,10,5:7,8,7,8
+21	16817051	.	A	G	152.24	PASS	AC=2;AF=1;AN=2;DP=35;FS=0;FractionInformativeReads=1;MQ=250;POSITIVE_TRAIN_SITE;QD=4.35;SOR=0.869;VQSLOD=11.01;culprit=FS	GT:AD:AF:DP:F1R2:F2R1:GQ:PL:GP:PRI:SB:MB	1/1:0,35:1:35:0,17:0,18:102:190,105,0:152.2,102.2,0:0,34.77,37.77:0,0,16,19:0,0,18,17
+21	40430550	.	G	A	106.65	PASS	AC=2;AF=1;AN=2;DP=20;FS=0;FractionInformativeReads=1;MQ=250;POSITIVE_TRAIN_SITE;QD=5.33;SOR=2.093;VQSLOD=10.92;culprit=SOR	GT:AD:AF:DP:F1R2:F2R1:GQ:PL:GP:PRI:SB:MB	1/1:0,20:1:20:0,8:0,12:57:144,60,0:106.7,56.65,9.319e-06:0,34.77,37.77:0,0,5,15:0,0,11,9
+22	25209724	.	T	C	50	PASS	AC=1;AF=0.5;AN=2;DP=26;FS=3.653;FractionInformativeReads=1;MQ=250;MQRankSum=4.295;POSITIVE_TRAIN_SITE;QD=1.92;R2_5P_bias=9.365;ReadPosRankSum=2.34;SOR=1.206;VQSLOD=10.16;culprit=FS	GT:AD:AF:DP:F1R2:F2R1:GQ:PL:GP:PRI:SB:MB:PS	0|1:12,14:0.538:26:4,5:8,9:48:85,0,50:50,6.705e-05,52.66:0,34.77,37.77:7,5,5,9:5,7,6,8:25209724
