@@ -31,12 +31,13 @@ Open two terminals at the '__WebApp__' directory.
 On one run __cd backend__.
 
 Then run __python app.py__ or __python3 app.py__ based on your python version.
+This activates the backend!
 
 
 ### 3. START FRONTEND
 On one other terminal run __cd frontend__.
 
-Then run __npm run serve__ or __npm run dev__
+Then run __npm run serve__ or __npm run dev__. This activates the frontend!
 
 
 ### GET YOUR PREDICTION!
