@@ -59,9 +59,13 @@
                                   :index="1"
                                   :width="30" > 
                       <div class="inside-toggle-list">
-                        <p> The <strong>'DNN Score'</strong> is calculated using our Neural Network. 
+                        <p> The <strong>'DNN Score'</strong> is calculated using our Neural Network. It is an estimated probabillity
+                          that your genetic profile matches the one of someone who has the disease.
+                          <br> <strong>It is NOT</strong> a dignosis. <strong>It is NOT</strong> a probability of future disease development.
                           <br> The <strong>'Manual PRS'</strong> score is calculated as a sum of your genetic mutations 
-                          weighted by their statistical effect on the Disease. </p>
+                          weighted by their statistical effect on the Disease. 
+                        
+                    </p>
                       </div>
                   </ToggleList>
                   <ToggleList     title="How accurate are the two scores?"
@@ -69,7 +73,19 @@
                                   :width="30" > 
                       <div class="inside-toggle-list">
                         <p> 
-                          Both scores represent an <strong>estimated risk</strong> of developing the disease based only on  
+                          Both scores represent an <strong>estimated risk</strong> of developing the disease based only on your genetic mutations.
+                          <br> Your <strong>DNN Score</strong> is closely related to the Radar Chart on the bottom left of the page.
+                          <br> It represents how the Crohn-linked mutations are distributed among the 22 analysed Chromosomes.
+                          <br> You can see how you compare to the base analysed population in terms of <strong>mutation number</strong> and 
+                          <strong>location</strong>.
+
+                          <br> Your <strong>PRS Score</strong> is closely related to the bottom right Bar Chart. 
+                          <br> If your line is on the far right, where the bell <strong>drops</strong>, it may indocate that
+                            you may have a genetically higher risk of developing Crohn's.
+                            <br> If your line is on the same level but on the opposite far left, it may indocate that
+                            you may have a genetically lower risk of developing Crohn's.
+                            <br> Positioning in any <strong>middle</strong> area of the bell means that you have a similar genetic 
+                            risk to the general base population analysed.
                         </p>
                       </div>
                   </ToggleList>
