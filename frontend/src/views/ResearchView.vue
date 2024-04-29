@@ -46,7 +46,7 @@
                                           risk of developing Crohns Disease.
                                        <br> Notable mutations include variants on the <strong>NOD2</strong> gene, on the 16th Chromosome.
                                        <br> Other influencial factors include <strong>smoking</strong>, which as far as <strong>triplicates</strong>
-                                        the risk of Crohn's and its severity, as well as diet and stress.
+                                        the risk of Crohn's, as well as diet and stress.
                                       </p>
                                   </div>
                               </ToggleList>
@@ -75,8 +75,14 @@
                                 :index="0"
                                 :width="this.toggle_item_width">  
                                   <div class="inside-toggle-list">
-                                    <p> <strong>Neural Networks</strong> are a subclass of Machine Learning models </p>
-                                    <img style="float: right; width: 25vw; margin: 5px 10px 5px 0px;" src="@/images/ai_vs_dl.png">
+                                    <img style="float: right; width: 15vw; margin: 5px 10px 5px 0px;" src="@/images/ai_vs_dl.png">
+                                    <p> <strong>Neural Networks</strong> are a subclass of Machine Learning models. </p>
+                                    <p> They are characterized by their ability to <strong>learn</strong> from big quantities of data, by 
+                                    analysing and uncovering <i>patterns</i> amongst input features.
+                                    <br> They do this <i>autonomously</i>, by comparing for each data seen, what they predicted around
+                                        what the real value was. Based on this, they adjust their <strong>weights</strong> in order to minimise the difference
+                                        between predicted and target value.
+                                    </p>
                                   </div>
                               </ToggleList>
                               <ToggleList 
@@ -84,17 +90,28 @@
                                 :index="1"
                                 :width="this.toggle_item_width">  
                                   <div class="inside-toggle-list">
-                                    <p> Neural Networks are  </p>
-                                    <img src="@/images/DNN.png">
+                                    <p> Neural Networks are still not very popularly implemented in Disease Prediction, because of the 
+                                      <strong>ethical</strong>, <strong>legal</strong> and <strong>social</strong> effects their predictions may have.
+                                      <br> Our implemented model is one of the few existing models especially trained for Crohns Prediction. 
+                                      Other models have in the last years been created to predict illnesses like <i>Alzheimer's Disease</i> 
+                                      and <i>Diabetes</i>.
+                                      <br> They work by analysing many genetic profiles of people who have and don't have Crohns Disease, in order to find patterns that 
+                                      allow the Network to identify if an new unseen sample has a closer profile to the <strong>healthy</strong> or <strong>affected</strong>
+                                      individual.
+                                    </p>
                                   </div>
                               </ToggleList>
                               <ToggleList 
-                                title="Our Network: Crohn's Predict"
+                                title="Our Network: CrohnsPred"
                                 :index="2"
                                 :width="this.toggle_item_width">  
                                   <div class="inside-toggle-list">
-                                    <p> Neural Networks are  </p>
-                                    <img src="@/images/DNN.png">
+                                    <p> <strong>CrohnsPred</strong> is our implemented Deep Neural Network.
+                                    It has 20 hidden layers and has been trained on datasets od over <i>100000</i> samples. </p>
+                                    <img style="width: 45vw; margin: 5px 10px 5px 0px;" src="@/images/DNN.png">
+                                    <p> It has an accuracy of over <strong>64</strong>% and on average predicts Disease presence <strong>more than half of the times</strong>
+                                    more accuractely than <strong>manual Polygenic Risk Scores</strong>, the commonly used metric to assert the genetic 
+                                  risk of developing a certain Disease.</p>
                                   </div>
                               </ToggleList>
                           </div>
