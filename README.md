@@ -18,6 +18,7 @@ Main local requirements are:
 * d3.js
 * bootstrap
 * babel
+* gsap
 
 
 ### 1. DOWNLOAD THIS REPOSITORY
